@@ -8,11 +8,26 @@ let [state,setstate]=useState([])
 let[heading,setheading]=useState([])
 
 
+// useEffect(()=>{
+//        axios.get('http://localhost:4000/ke').then((res)=>{
+//         setheading(Object.keys(res.data[2]))
+//         setstate(res.data)
+//        }).catch((error)=>{console.log(error);})
+// },[])
+
 useEffect(()=>{
-       axios.get('http://localhost:4000/ke').then((res)=>{
-        setheading(Object.keys(res.data[2]))
-        setstate(res.data)
-       }).catch((error)=>{console.log(error);})
+ try {
+    let fetchdata=async()=>{
+    let responce=await fetch('http://localhost:4000/ke')
+    let data=await responce.json()
+    setheading(Object.keys(data[0]))
+    setstate(data)
+    
+    }
+    fetchdata()
+ } catch (error) {
+    
+ }
 },[])
 
     return ( 
