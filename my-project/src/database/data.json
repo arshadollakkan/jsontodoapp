@@ -1,0 +1,27 @@
+{
+    "ke":[{
+        "id":1,
+        "name":"arshad",
+        "address":"ollakkan house",
+        "occupation":"nil"
+
+    },{
+        "id":2,
+        "name":"rajan",
+        "address":"thokkadi house",
+        "occupation":"bnack end developer"
+
+    },{
+        "id":3,
+        "name":"jala",
+        "address":"mirror white house",
+        "occupation":"flutter developer"
+
+    },{
+        "id":4,
+        "name":"alim",
+        "address":"chappattil house",
+        "occupation":"business"
+
+    }]
+}
