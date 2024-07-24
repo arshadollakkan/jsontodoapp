@@ -1,0 +1,5 @@
+we can use fetch,axios for fetching data using useeffect
+we can use axios,normal put method for adding data
+editing: 1,we need id-so we use params hooks it gives the current id property
+          2.for accessing the current values to the input use get/fetch method for that we need a  usestate and give the value propety for accessing that value
+          then by using onchange method we acn put the current value using axios
