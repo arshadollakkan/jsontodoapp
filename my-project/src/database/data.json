@@ -1,12 +1,6 @@
 {
   "ke": [
     {
-      "id": "1",
-      "name": "arshad",
-      "address": "ollakkan house",
-      "occupation": "nil"
-    },
-    {
       "id": "2",
       "name": "rajan",
       "address": "thokkadi house",
@@ -23,26 +17,6 @@
       "name": "alim",
       "address": "chappattil house",
       "occupation": "business"
-    },
-    {
-      "id": "44fd",
-      "occupation": "ioewdujio"
-    },
-    {
-      "id": "6ef4",
-      "occupation": "jkef"
-    },
-    {
-      "id": "6b51",
-      "occupation": "ioefwjuio"
-    },
-    {
-      "id": "75f0",
-      "occupation": "fehui"
-    },
-    {
-      "id": "dd23",
-      "occupation": "kbfl"
     },
     {
       "id": "d5d3",

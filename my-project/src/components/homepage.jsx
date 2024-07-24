@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
 
@@ -14,6 +15,7 @@ let[heading,setheading]=useState([])
 //         setstate(res.data)
 //        }).catch((error)=>{console.log(error);})
 // },[])
+let nav=useNavigate()
 
 useEffect(()=>{
  try {
@@ -29,7 +31,21 @@ useEffect(()=>{
     
  }
 },[])
+let asd=(id)=>{
+        // axios.delete('http://localhost:4000/ke/'+id).then((res)=>{
+        //     alert("deleted")
+        //     nav('/')
 
+
+        // }).catch((error)=>{
+        //     console.log(error);
+        // })
+        fetch('http://localhost:4000/ke/'+id,{
+            method:"DELETE"
+        })
+              alert("deleted")
+            nav('/')
+}
     return ( 
         <div className=" text-center pt-[300px] ps-[600px]">
 
@@ -40,8 +56,10 @@ useEffect(()=>{
         {
             heading.map((x,i)=>(
                 <th className="border border-slate-300" key={i}>{x}</th>
+            
             ))
         }
+        <th className="border border-slate-300">action</th>
     </tr>
  </thead>
       
@@ -53,6 +71,8 @@ useEffect(()=>{
               <td className="border border-slate-300">{x.name}</td>
               <td className="border border-slate-300">{x.address}</td>
               <td className="border border-slate-300">{x.occupation}</td>
+              <Link to={`/edit/${x.id}`} className="border border-slate-300">edit</Link>
+              <button onClick={()=>asd(x.id)}>delete</button>
               </tr>
             
         ))
@@ -63,6 +83,9 @@ useEffect(()=>{
 
         </div>
      );
+
+
+   
 }
  
 export default Home;
